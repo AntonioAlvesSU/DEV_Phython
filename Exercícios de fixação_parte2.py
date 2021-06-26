@@ -230,21 +230,150 @@ Cotacao = float(input("O valor é : \n"))
 Dolar = Reais / Cotacao
 print('Resultado da soma dos quadrados dos valores é :  US$ ', round(Dolar,2))
 
+#31-Leia um numero inteiro e imprima seu antecessor e o seu sucessor:
+
+print('Por favor digite o valor um valor inteiro: ')
+num = int(input("O valor é : \n"))
+antecessor = num + 1
+sucessor = num - 1
+print('Resultado do valor inteiro informado :  ', num )
+print('Resultado do antecessor :  ', antecessor )
+print('Resultado do sucessor :  ', sucessor )
+
+#32-Leia um numero inteiro e imprima a soma de seu sucessor de seu triplo com antecessor de seu dobro:
+
+print('Por favor digite um valor inteiro: ')
+num = int(input("O valor é : \n"))
+antecessor = num * 3
+sucessor = num * 2
+print('Resultado do valor inteiro informado :  ', num )
+print('O sucessor é :  ',  sucessor)
+print('O antecessor é : :  ', antecessor)
+print('Resultado da soma  antecessor com o sucessor :  ', antecessor  + sucessor)
+
+#33-Leia um lado de um quadrado e calcule a área :
+
+print('Por favor digite o lado de um quadrado: ')
+lado = int(input("O valor é : \n"))
+area = lado ** 2
+print('A area do quadrado é :  ', area 
+
+#34-Leia o valor do raio de um circulo e calcule a área do circulo, formula = pi * raio², considere pi=3,141592
+
+print('Por favor digite o raio de um circulo:')
+raio = int(input("O raio é : \n"))
+area = 3.141592 * raio ** 2
+print('A area do circulo= ',round(area ,3))
+
+#35-Leia os valores a e b são catetos de um triângulo, onde a hipotenusa é obtida pela equação =
+#hipotenusa = √a²+ √b²
+import math
+print('Por favor digite o cateto A:')
+catetoA = int(input("O valor é : "))
+print('Por favor digite o cateto B:')
+catetoB = int(input("O valor é : "))
+hipotenusa = math.hypot(catetoA,catetoB)
+print('A hipotenusa do triângulo :',round(hipotenusa,3))
+
+#36-Leia altura e o raio de um cilindro circular e calcule o volume, formula : V = pi * raio² * altura, onde pi = 3,141592
+
+import math
+pi = 3.141592
+print('Por favor digite o altura:')
+altura = int(input("O valor é : "))
+print('Por favor digite o raio:')
+raio = int(input("O valor é : "))
+volume = pi * raio** 2 * altura
+print('O volume do cilindro é :',round(volume,3)
+
+#37-Leia o valor do produto e imprima este valor com 12% de desconto:
+
+import math
+
+print('Por favor digite o valor do produto:')
+valor = float(input("O valor é : "))
+print('Por favor digite percentual de desconto:')
+percentual = float(input("O valor é : "))
+Valor_final_produto = valor * ((100 - percentual) / 100 )
+print('O volume do cilindro é :',round(Valor_final_produto,3))
+
+#38-Leia o valor do salario de um colaborador e imprima o novo_salario com 25% de aumento:
+
+import math
+
+print('Por favor digite o valor do salario:')
+salario = float(input("O valor é : "))
+print('Por favor digite percentual de aumento:')
+percentual = float(input("O valor é : "))
+novo_salario = salario * ((100 + percentual) / 100 )
+print('O volume do cilindro é :',round(novo_salario,3))
+
+#39-Leia o valor de R$ 780.000.00 será dividida em três, 1-parte receberá: 46%, 2-parte receberá 32% e 3-parte o restante:
+
+import math
+print('Por favor digite o valor do premio:')
+premio = float(input("O valor é : "))
+print('Por favor digite percentual do primeiro recebedor:')
+primeiro = float(input("O valor é : "))
+print('Por favor digite percentual do segundo recebedor:')
+segundo = float(input("O valor é : "))
+parte1 = premio * ((100 - primeiro)/100)
+parte2 = (premio - parte1) * ((100-segundo) / 100)
+parte3 = premio - parte1 - parte2
+print('O valor da parte1 é : R$ ',round(parte1,2))
+print('O valor da parte2 é : R$ ',round(parte2,2))
+print('O valor da parte3 é : R$ ',round(parte3,2))
+
+#40-uma empresa contrata um encanador a R$ 30.00 ao dia, faça um programa que solicite o numero de dias
+# trabalhados pelo encanador e informe a quantia_liquida a ser paga já descontados 8% IR:
+
+import math
+diaria = 30.00
+ir=8
+print('Por favor digite os dias_trabalhados:')
+dias_trabalhados = float(input("O valor é : "))
+quantia_liquida_receber = dias_trabalhados * diaria * ((100 - ir)/100)
+print('A quantia liquida a receber é : R$ ',quantia_liquida_receber)
+
+#41-ler hora de trabalho em reais e números de horas trabalhadas no mês, imprima o valor a ser pago
+# adcionando  10% do valor calculado:
+
+import math
+mes = 30
+taxa_adicional=10
+dia = 24
+print('Por favor digite os valor_hora:')
+valor_hora = float(input("O valor é : "))
+valor_dia = valor_hora * dia
+valor_mês_trabalhado = valor_dia * mes
+quantia_liquida_receber = valor_mês_trabalhado * ((100 + taxa_adicional)/100)
+print('A quantia liquida a receber é : R$ ',round(quantia_liquida_receber,2))
+
+#42-ler salário base de um funcionário, calcule o salário a receber sabendo que funcionário tem
+# uma gratificação de 5% sobre o salario base, é descontado 7% em cima do salário base:
+
+import math
+taxa_gratificacao = 5
+taxa_desconto= 7
+print('Por favor digite os valor do salário:')
+valor_salario = float(input("O valor é : "))
+valor_salario_gratificacao = valor_salario * ((100 + taxa_gratificacao)/100)
+quantia_liquida_receber = valor_salario_gratificacao * ((100 - taxa_desconto)/100)
+print('A quantia liquida a receber é : R$ ',round(quantia_liquida_receber,2))
+
 """
-#30-Leia o valor em reais e a cotação do dolar e calcule o valor em dolar:
 
-print('Por favor digite o valor em Reais: ')
-Reais = float(input("O valor é : \n"))
-print('Por favor digite a cotação do dolar_de_hoje: ')
-Cotacao = float(input("O valor é : \n"))
-Dolar = Reais / Cotacao
-print('Resultado da soma dos quadrados dos valores é :  US$ ', round(Dolar,2))
+#42-ler salário base de um funcionário, calcule o salário a receber sabendo que funcionário tem
+# uma gratificação de 5% sobre o salario base, é descontado 7% em cima do salário base:
 
-
-
-
-
-
+import math
+taxa_gratificacao = 5
+taxa_desconto= 7
+print('Por favor digite os valor do salário:')
+valor_salario = float(input("O valor é : "))
+valor_salario_gratificacao = valor_salario * ((100 + taxa_gratificacao)/100)
+quantia_liquida_receber = valor_salario_gratificacao * ((100 - taxa_desconto)/100)
+print('A quantia liquida a receber é : R$ ',round(quantia_liquida_receber,2))
 
 
 

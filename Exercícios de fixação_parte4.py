@@ -365,27 +365,24 @@ print('A quantia liquida a receber é : R$ ',round(quantia_liquida_receber,2))
 
 #43-Escreva um progama de ajuda para o vendedor , a partir de um  valor total lido, mostre
 # o total a pagar com desconto de 10%; o valor de cada parcela , no parcelamento de 3 x sem juros;
-#a comissão do vendedor , no caso da venda ser a vista ( 5% sobre o valor com desconto)
-#mport math
-taxa_gratificacao = 5
-taxa_desconto= 7
-print('Por favor digite os valor do salário:')
-valor_salario = float(input("O valor é : "))
-valor_salario_gratificacao = valor_salario * ((100 + taxa_gratificacao)/100)
-quantia_liquida_receber = valor_salario_gratificacao * ((100 - taxa_desconto)/100)
-print('A quantia liquida a receber é : R$ ',round(quantia_liquida_receber,2))
+#a comissão do vendedor , no caso da venda ser a vista ( 5% sobre o valor com desconto);
+#a comissão do vendedor no caso da venda ser parcelada (5% sobre o valor total)
+import math
+desc1 =10 #o total a pagar com desconto de 10%;
+parc= 3 #sem juros;
+com1= 5 #no caso da venda ser a vista sobre o valor com desconto;
+com2= 5 #no caso da venda ser parcelada sobre o valor total;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+print('Por favor ensira o valor da venda: ')
+valor_venda= float(input("Valor é : "))
+Total_com_desc= valor_venda * ((100-10)/100)
+print('Por favor ensira o número de parcelas: ')
+num_parc = int(input("Ensira o numero de parcelas = "))
+valor_parcela=Total_com_desc * ((100-10)/100)
+com1=(valor_venda * 10/100) * 5/100
+com2=Total_com_desc * 5/100
+print('O total a pagar com desconto de 10% = ', Total_com_desc  )
+print('O número de parcelas da venda até Três vezes sem juros = ', num_parc )
+print('A comissão do vendedor  no caso da venda ser a vista =  ',  com1 )
+print('A comissão do vendedor no caso da venda ser parceladao =',  com2 )
 

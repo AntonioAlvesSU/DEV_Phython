@@ -83,6 +83,12 @@ socorram me subino onibus em marrocos
 
 palindromo o inverso é o proprio texto
 """
+nome = 'Antonio Augusto'
+print (nome)
+
+
+
+
 
 
 
